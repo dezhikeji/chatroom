@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>websocket Echo Test</title>
+
+    <link href="./fs/css.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="./fs/bootstrap.css" type="text/css">
+
+    <link rel="stylesheet" href="./fs/style.css" type="text/css">
+    <script src="./fs/bootstrap.js"></script>
+
+</head>
+<body style="position: static;">
+
+<section id="after-intro" class="page-wrapper light-bg active">
+    <div class="container">
+
+            <div id="echo">
+                <div id="echo-config">
+                    <strong>Location:</strong><br>
+                    <input class="draw-border" id="wsUri" size="150">
+                    <br>
+                    <input class="draw-border echo-checkbox" type="checkbox" id="secureCb" onclick="toggleTls();">
+                    <span id="secureCbLabel" style="font-size: smaller; color: black;">Use secure WebSocket (TLS)</span><br>
+                    <button class="echo-button" id="connect">Connect</button>
+                    <button class="echo-button" id="disconnect" disabled="">Disconnect</button>
+                    <br>
+                    <br>
+                    <strong>Message:</strong><br>
+                    <input class="draw-border" id="sendMessage" size="150" value='{"actionType":"user_send_message","body":{"text":"你妹","color":"#ffffff","images":[]}}' disabled="">
+                    <br>
+                    <button class="echo-button" id="send" disabled="">Send</button>
+                </div>
+                <div id="echo-log" style="width: 100%;"> <strong>Log:</strong>
+                    <div id="consoleLog"></div>
+                    <button class="echo-button" id="clearLogBut" style="position: relative; top: 3px;">Clear log</button>
+                </div>
+            </div>
+        <div>
+            其他类型消息体
+            <pre>
+                {"actionType":"user_send_message","body":{"text":"你妹","color":"#ffffff","images":[]}}
+                {"actionType":"user_send_gift","body":{"giftId":"礼物id","count":"12"}}
+                {"actionType":"room_close","body":{}}
+            </pre>
+
+
+        </div>
+        </div>
+    </section>
+
+<script src="./fs/echo.js"></script>
+</body>
+
+</html>

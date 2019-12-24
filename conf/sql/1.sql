@@ -1,0 +1,2 @@
+ALTER TABLE `ExecuteSql` MODIFY COLUMN `content`  varchar(9016) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `id`;
+CREATE TABLE Setting (id VARCHAR(32),name VARCHAR(255),value VARCHAR(255),remark VARCHAR(255),PRIMARY KEY (id));

@@ -1,0 +1,1 @@
+sbt  -Dsbt.override.build.repos=true "run 9000 -Dconfig.file=conf/debug.conf"

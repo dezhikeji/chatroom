@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#system
+
+#GET         /api/docs                       @controllers.ApiHelpController.getResources
+
+##########   User
+
+############################
+
+POST        /api/chatroom/control        @controllers.RoomController.control
+
+GET         /api/chatroom/socket/:id        @controllers.RoomController.socket(id: String)
+
+#resource
+
+GET         /                               controllers.Assets.at(path="/public",file:String="index.html")
+
+GET         /*file                          controllers.Assets.at(path="/public",file:String)
