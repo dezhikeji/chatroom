@@ -19,7 +19,7 @@ libraryDependencies ++= Seq(
   "com.alibaba" % "druid" % "1.0.24",
   "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.7.5",
   "net.jpountz.lz4" % "lz4" % "1.3.0",
-  "io.swagger" %% "swagger-play2" % "1.5.3.3",
+  "io.swagger" %% "swagger-play2" % "1.5.2",
   "com.twitter" %% "chill-akka" % "0.9.2",
   specs2 % Test
 )
